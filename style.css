@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    text-align: center;
+}
+.fan-sercit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-box{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 15vh;
+    width: 15vh;
+    background: linear-gradient(to right bottom, rgb(71, 255, 126), rgb(234, 255, 0));
+}
+.fan-button, .light-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(93, 223, 243);
+    height: 8vh;
+    width: 6vh; 
+    cursor: pointer;
+}
+.fan-box{
+    height: 50vh;
+    width: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2vh;
+    background-color: blacks;
+}
+.fan{
+    background-color: burlywood;
+
+
+}
+.fan1{
+    height: 5.5vh;
+    width: 11vh;
+    margin-top: 8vh;
+    padding-left: 10vh;
+    padding-right: 3vh;
+    transform: rotate(-15deg);
+}
+.fan2{
+    height: 5.5vh;
+    width: 29vh;
+    margin-bottom: 20vh;
+    transform: rotate(90deg);
+    position: absolute;
+}
+.fan3{
+    height: 5.5vh;
+    width: 11vh;
+    margin-top: 8vh;
+    padding-right: 10vh;
+    padding-left: 3vh;
+    transform: rotate(15deg);
+}
+.middle-circle{
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    background-color: burlywood;
+    position: absolute;
+}
+.rotate{
+    animation-name: rotation;
+    animation-duration: 0.2s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+@keyframes rotation {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.stop-rotate{
+    animation-name: rotation-stop;
+    animation-duration: 0.8s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+@keyframes rotation-stop {
+    0%{
+        transform: rotate(-360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.light-box{
+    height: 30vh;
+    width: 30vh;
+    background-color: black;
+    z-index: -2;
+}
+.light-glass{
+    height: 7vh;
+    width: 5vh;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    z-index: 1;
+    position: absolute;
+    background-color: aliceblue;
+    box-shadow: 0px 0px 40px 20px white;
+}
+.light-bottom{
+    background: blueviolet;
+    height: 9vh;
+    width: 5vh;
+    margin-left: 0vh;
+    margin-top: 6vh;
+}
+.hide{
+    display: none;
+}
+h1{
+    color: white;
+}
